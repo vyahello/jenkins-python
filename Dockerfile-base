@@ -1,0 +1,8 @@
+FROM jenkins/jenkins:lts
+LABEL version=0.1.0 \
+      metadata="The base image for Jenkins server application" \
+      maintainer="Volodymyr Yahello <vyahello@gmail.com>"
+USER root
+RUN apt-get update && \
+    apt-get install -y libffi-dev gcc wget make zlib1g-dev && \
+    apt-get autoclean -y
