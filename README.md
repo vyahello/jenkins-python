@@ -19,13 +19,31 @@ TBD
 ```bash
 git clone git@github.com:vyahello/jenkins-python.git
 cd jenkins-python
+docker-compose up
 ```
 
-Then please open http://localhost:5000 in your browser.
+Then please open http://localhost:8080 in your browser.
 
 **[⬆ back to top](#jenkins-with-python)**
 
 ## Development notes
+
+### Release image 
+
+#### Base Jenkins image
+
+```bash
+docker build --no-cache --tag vyahello/jenkins-python-base:0.1.0 --file Dockerfile-base .
+docker push jenkins-python-base:0.1.0
+```
+
+#### Python Jenkins image
+
+```bash
+docker build --no-cache --tag vyahello/jenkins-python:3.7 --file Dockerfile-python3.7 .
+docker run -it --rm vyahello/jenkins-python:3.7 python -V
+docker push vyahello/jenkins-python:3.7
+```
 
 ### Meta
 

@@ -1,0 +1,12 @@
+FROM vyahello/jenkins-python-base:0.1.0
+LABEL version=3.7 \
+      metadata="The main image for Jenkins app with python3.7" \
+      maintainer="Volodymyr Yahello <vyahello@gmail.com>"
+USER root
+RUN wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz && \
+    tar xzf Python-3.7.0.tgz && \
+    cd Python-3.7.0 && \
+    ./configure --enable-optimizations && \
+    make altinstall && \
+    ln -s /usr/local/bin/python3.7 /usr/bin/python && \
+    ln -s /usr/local/bin/pip3.7 /usr/bin/pip
