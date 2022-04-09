@@ -1,0 +1,12 @@
+FROM vyahello/jenkins-python-base:0.1.0
+LABEL version=3.6 \
+      metadata="The main image for Jenkins app with python3.6" \
+      maintainer="Volodymyr Yahello <vyahello@gmail.com>"
+USER root
+RUN wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz && \
+    tar xzf Python-3.8.0.tgz && \
+    cd Python-3.8.0 && \
+    ./configure --enable-optimizations && \
+    make altinstall && \
+    ln -s /usr/local/bin/python3.8 /usr/bin/python && \
+    ln -s /usr/local/bin/pip3.8 /usr/bin/pip
