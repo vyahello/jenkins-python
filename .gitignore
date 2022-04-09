@@ -31,3 +31,6 @@ build/
 
 # db
 *.sqlite
+
+# jenkins resources
+jenkins_home
