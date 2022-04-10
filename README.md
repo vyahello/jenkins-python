@@ -1,3 +1,5 @@
+![Screenshot](logo.png)
+
 [![Docker pulls](https://img.shields.io/docker/pulls/vyahello/jenkins-python.svg)](https://hub.docker.com/repository/docker/vyahello/jenkins-python)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 
@@ -27,6 +29,8 @@ docker-compose up
 ```
 
 Then please open http://localhost:8080 in your browser.
+
+> Note: all Jenkins server files will be stored in `jenkins_home` folder in current working directory.
 
 **[⬆ back to top](#jenkins-with-python)**
 
