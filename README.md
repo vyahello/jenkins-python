@@ -16,6 +16,7 @@
 - [vyahello/jenkins-python:3.7](https://hub.docker.com/layers/jenkins-python/vyahello/jenkins-python/3.7/images/sha256-3299c5c817690a91f3ce2fc81f4e8281bbe61bc63c2c869b5544303832d5e64a?context=repo)
 - [vyahello/jenkins-python:3.8](https://hub.docker.com/layers/jenkins-python/vyahello/jenkins-python/3.8/images/sha256-016efc8c313cb309a8e3ba87891f20e0d747009168ef274f64429806e2cc7c15?context=repo)
 - [vyahello/jenkins-python:3.9](https://hub.docker.com/layers/jenkins-python/vyahello/jenkins-python/3.9/images/sha256-9e1d533be65f02dc69ad3260011a9abe1e960ff66981a3b712da0136c0b31b82?context=repo)
+- [vyahello/jenkins-python:3.10](https://hub.docker.com/layers/202221477/vyahello/jenkins-python/3.10/images/sha256-f4f4c080e3ed4fbfb86f5ed62eeef9084f32145fcb30a74112e9a6cf66562043?context=repo)
 
 ## Usage
 
@@ -36,8 +37,8 @@ Then please open http://localhost:8080 in your browser.
 #### Base Jenkins image
 
 ```bash
-docker build --no-cache --tag vyahello/jenkins-python-base:0.1.0 --file Dockerfile-base .
-docker push jenkins-python-base:0.1.0
+docker build --no-cache --tag vyahello/jenkins-base:0.1.0 --file Dockerfile-base .
+docker push jenkins-base:0.1.0
 ```
 
 #### Python Jenkins image
