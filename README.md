@@ -15,6 +15,7 @@
 
 ## Docker images 
 
+- [vyahello/jenkins-python:3.6](https://hub.docker.com/layers/202247078/vyahello/jenkins-python/3.6/images/sha256-890a7936c4bd7c1fcd8dbc5899410f04f6080f88701bdd84fb06a5a1da112aaf?context=repo)
 - [vyahello/jenkins-python:3.7](https://hub.docker.com/layers/jenkins-python/vyahello/jenkins-python/3.7/images/sha256-3299c5c817690a91f3ce2fc81f4e8281bbe61bc63c2c869b5544303832d5e64a?context=repo)
 - [vyahello/jenkins-python:3.8](https://hub.docker.com/layers/jenkins-python/vyahello/jenkins-python/3.8/images/sha256-016efc8c313cb309a8e3ba87891f20e0d747009168ef274f64429806e2cc7c15?context=repo)
 - [vyahello/jenkins-python:3.9](https://hub.docker.com/layers/jenkins-python/vyahello/jenkins-python/3.9/images/sha256-9e1d533be65f02dc69ad3260011a9abe1e960ff66981a3b712da0136c0b31b82?context=repo)
