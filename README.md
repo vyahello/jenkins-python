@@ -23,15 +23,25 @@
 
 ## Usage
 
+### Docker
+
 ```bash
 git clone git@github.com:vyahello/jenkins-python.git
-cd jenkins-python
+cd jenkins-python/docker
 docker-compose up
 ```
 
 Then please open http://localhost:8080 in your browser.
 
 > Note: all Jenkins server files will be stored in `jenkins_home` folder in current working directory.
+
+### K8S 
+
+```bash
+kubectl apply -f k8s/deployment.yaml
+```
+
+Then please open http://localhost:8080 in your browser. It will create 2 Jenkins replicas.
 
 **[⬆ back to top](#jenkins-with-python)**
 
@@ -42,6 +52,7 @@ Then please open http://localhost:8080 in your browser.
 #### Base Jenkins image
 
 ```bash
+cd docker
 docker build --no-cache --tag vyahello/jenkins-base:0.1.0 --file Dockerfile-base .
 docker push jenkins-base:0.1.0
 ```
@@ -49,6 +60,7 @@ docker push jenkins-base:0.1.0
 #### Python Jenkins image
 
 ```bash
+cd docker
 docker build --no-cache --tag vyahello/jenkins-python:3.7 --file Dockerfile-python3.7 .
 docker run -it --rm vyahello/jenkins-python:3.7 python -V
 docker push vyahello/jenkins-python:3.7
