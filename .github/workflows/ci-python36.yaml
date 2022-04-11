@@ -1,4 +1,4 @@
-name: Build and Verify python3.7 image
+name: Build and Verify python3.6 image
 on:
   push:
     branches:
@@ -20,10 +20,10 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./docker/Dockerfile-python3.7
+          file: ./docker/Dockerfile-python3.6
           load: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/jenkins-python:test
       - name: Verify image
         run: |
-          docker run --rm --user root ${{ secrets.DOCKER_HUB_USERNAME }}/jenkins-python:test python -V | grep "Python 3.7.0"
-          docker run --rm --user root ${{ secrets.DOCKER_HUB_USERNAME }}/jenkins-python:test pip -V | grep "python 3.7"
+          docker run --rm --user root ${{ secrets.DOCKER_HUB_USERNAME }}/jenkins-python:test python -V | grep "Python 3.6.5"
+          docker run --rm --user root ${{ secrets.DOCKER_HUB_USERNAME }}/jenkins-python:test pip -V | grep "python 3.6"
